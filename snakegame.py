@@ -190,6 +190,8 @@ def gameloop():
 
             #eat food
             if abs(snake_x - food_x)<10 and abs(snake_y - food_y)<10:
+                pygame.mixer.music.load('sounds/BITE.mp3')
+                pygame.mixer.music.play()
                 score +=10   
                 #new food coordinates        
                 food_x = random.randint(15, window_width-15)
@@ -198,6 +200,7 @@ def gameloop():
                 snake_colour = random.choice(colours)
                 if score>int(high_score):
                     high_score = score
+
 
             gameWindow.fill((0,0,0))
         
@@ -222,14 +225,14 @@ def gameloop():
             #snake head collapses with body then game-over
             if snake_head in snake_body[:-1] and len(snake_body)>10:
                 game_over = True
-                # pygame.mixer.music.load('gameover.mp3')
-                # pygame.mixer.music.play()
+                pygame.mixer.music.load('sounds/GAMEOVER.mp3')
+                pygame.mixer.music.play()
 
             #snake head collapses with wall then game-over
             if snake_x<0 or snake_x>window_width or snake_y<50 or snake_y>window_height:
                 game_over = True
-                # pygame.mixer.music.load('gameover.mp3')
-                # pygame.mixer.music.play()
+                pygame.mixer.music.load('sounds/GAMEOVER.mp3')
+                pygame.mixer.music.play()
 
             plot_snake(gameWindow, snake_colour, snake_body, snake_size)
             
