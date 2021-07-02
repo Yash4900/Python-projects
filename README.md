@@ -2,6 +2,12 @@
 
 Classical snake game :snake: built using Pygames. <img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/pygame_logo.gif" height="30px" />
  
+ ## Install dependency using
+ 
+ ```
+ pip install pygame
+ ```
+ 
  ## Command to run the app
  
  ```
