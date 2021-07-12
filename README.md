@@ -1,8 +1,8 @@
 # Snakes
 
-Classical snake game :snake: built using Pygames. <img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/pygame_logo.gif" height="30px" />
+Classical snake game :snake: built using  <img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/pygame_logo.gif" height="30px" />
  
- ## Install dependency using
+ ## Install pygame package using
  
  ```
  pip install pygame
