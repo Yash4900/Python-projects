@@ -9,6 +9,7 @@ cap = cv2.VideoCapture(0)
 
 start_detecting = False
 blink_count = 0
+count = 0
 
 while (True):
   ret, frame = cap.read()
@@ -20,6 +21,9 @@ while (True):
   faces = face_cascade.detectMultiScale(gray_scale, 1.3, 5, minSize = (200, 200))
 
   if len(faces) > 0:
+
+    count = 0
+
     for (x, y, w, h) in faces:
 
       # Draw rectangle where face is found
@@ -41,9 +45,11 @@ while (True):
           blink_count  = blink_count + 1
           start_detecting = False
   else:
-    # Reset the values if no face found
-    start_detecting = False
-    blink_count = 0
+    # Reset the values if no face found for 10 consecutive frames
+    count = count + 1
+    if (count>=10):
+      start_detecting = False
+      blink_count = 0
 
   # Print Blink count
   cv2.putText(frame, "BLINK COUNT: {}".format(blink_count), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)    
