@@ -18,7 +18,7 @@ while (True):
   gray_scale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
   # Detect faces
-  faces = face_cascade.detectMultiScale(gray_scale, 1.3, 5, minSize = (200, 200))
+  faces = face_cascade.detectMultiScale(gray_scale, 1.3, 5)
 
   if len(faces) > 0:
 
@@ -39,7 +39,9 @@ while (True):
       # set start_detecting to False. This will ensure that next blink will 
       # be detected when user opens the eyes again  
       if len(eyes) >= 2:
-        start_detecting = True      
+        start_detecting = True
+        for (ex, ey, ew, eh) in eyes:
+          frame = cv2.rectangle(frame, (x+ex, y+ey), (x+ex+ew, y+ey+eh), (255, 0, 0), 2)      
       else:
         if start_detecting:
           blink_count  = blink_count + 1
