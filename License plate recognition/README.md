@@ -1,25 +1,15 @@
-# Snakes
+# License plate recognition
 
-Classical snake game :snake: built using  <img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/pygame_logo.gif" height="30px" />
- 
- ## Install pygame package using
- 
- ```
- pip install pygame
- ```
- 
- ## Command to run the app
- 
- ```
- python snakegame.py
-```
-## How to play
+Methodology:
+1. Import packages
+2. Import image and convert it to grayscale
+3. Remove noise (bilateral filtering) and perform edge detection (canny edge detection)
+4. Find shapes (contours) from the edged image and filter out best shapes (max area)
+5. Get corner points of the license plate
+6. Crop out the roi using masking
+7. Recognize text using easyocr
 
-1. You can refer to the instructions :scroll:.
-2. Press any arrow key :arrow_up: :arrow_down: :arrow_right: :arrow_left: to start the game.
-3. Try to eat maximum food :apple: and avoid colliding the wall or the snake body.
-5. The snake's color and speed changes on eating the food and score increases by 10.
- 
-## Demo
 
-<img src="./demo/demo.gif" />
+<span><img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" /></span>
+<span><img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" /></span>
+<span><img src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" /></span>
