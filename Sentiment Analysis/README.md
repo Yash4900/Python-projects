@@ -1,14 +1,10 @@
-# Password strength checker
+# Movie sentiment analysis
+
+Dataset link: https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
 **Methodology:**
 1. Import packages and dataset
-2. Convert dataset into np array
+2. Convert dataset into np array and preprocess text 
 3. Tokenize dataset using Tfidfvectorizer 
 4. Train test splitting
-5. Model building (xgboost classifier is used as it gave very good accuracy over logistic regressor)
-6. Save model as a pikle file to be used by the flask app for predicting password strength
-7. Creating flask app where user can enter password and get the password's strength
-
-**Demo**
-
-<img src="https://github.com/Yash4900/Python-projects/blob/master/Password%20strength%20checker/demo/demo.gif?raw=true" />
+5. Model building (Multinomial Navie Bayes classifier is used) and prediction
