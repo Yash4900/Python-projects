@@ -2,6 +2,8 @@
 
 Simple blink counting program
 
+Face and eye detection done with the help of haar cascades.
+
 **Install opencv using**
 
 ```
