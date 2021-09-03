@@ -14,3 +14,11 @@
 **Demo**
 
 <img src="https://github.com/Yash4900/Python-projects/blob/master/Password%20strength%20checker/demo/demo.gif?raw=true" />
+
+**Made using**
+
+
+<span><img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" /></span>
+<span><img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" /></span>
+<span><img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" /></span>
+<span><img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" /></span>
