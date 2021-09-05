@@ -13,3 +13,5 @@ Methodology:
 <span><img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" /></span>
 <span><img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" /></span>
 <span><img src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" /></span>
+
+**Flutter App Link: https://github.com/Yash4900/Test/tree/main/ALPR**
