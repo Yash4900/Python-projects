@@ -11,7 +11,7 @@ cap = cv2.VideoCapture(0)
 
 while (True):
   ret, frame = cap.read()
-  
+
   face = frame
   face = cv2.resize(face, (224, 224)) # Resize image
   face = np.array([face]) # Adding extra dimension
